@@ -18,7 +18,7 @@ from setuptools import find_packages
 from . import __version__
 
 setup(
-    name='ntokloapi-python',
+    name='ntokloapi',
     version=__version__,
     author=u'Oscar Carballal Prego',
     author_email='oscar.carballal@ntoklo.com',
