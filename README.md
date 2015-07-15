@@ -28,7 +28,7 @@ This is a list of the functionality that is available on this API connector:
 
 To install this library, you can do it through pip:
 
-    $ pip install ntokloapi-python
+    $ pip install ntokloapi
 
 If you want the latest version from the repository you can do:
 
@@ -36,15 +36,7 @@ If you want the latest version from the repository you can do:
 
 ## Usage
 
-To use the nToklo API connector:
-
-    from ntokloapi.events import Event
-
-    payload = {"user": {"user_id": "112"},"product": {"id": "10201","category": "Shoes","manufacturer": "Nike"},"events": [{"action": "preview","category": "conversion_funnel"}]}
-
-    event = Event(<myAPIKey>, <myAPISecret>)
-
-    event.send(payload)
+You can see how to use this library on the `documentation <http://ntokloapi-python.readthedocs.org/en/latest/>`_
 
 ## License
 
