@@ -36,7 +36,7 @@ If you want the latest version from the repository you can do:
 
 ## Usage
 
-You can see how to use this library on the `documentation <http://ntokloapi-python.readthedocs.org/en/latest/>`_
+You can see how to use this library on the [documentation](http://ntokloapi-python.readthedocs.org/en/latest/)
 
 ## License
 
