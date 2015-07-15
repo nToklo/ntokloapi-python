@@ -29,5 +29,3 @@ setup(
     long_description=open('README.md').read(),
     zip_safe=False,
 )
-
-
