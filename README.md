@@ -18,6 +18,12 @@ This is a list of the functionality that is available on this API connector:
 * Products (create)
 * Recommendations (get)
 
+## Dependencies
+
+- Python Requests framework
+
+    pip install requests
+
 ## Installing
 
 To install this library, you can do it through pip:
@@ -31,7 +37,6 @@ If you want the latest version from the repository you can do:
 ## Usage
 
 To use the nToklo API connector:
-::
 
     from ntokloapi.events import Event
 
