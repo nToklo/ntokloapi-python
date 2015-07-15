@@ -23,11 +23,10 @@ setup(
     author=u'Oscar Carballal Prego',
     author_email='oscar.carballal@ntoklo.com',
     packages=find_packages(),
-    url='http://bitbucket.org/bruno/django-geoportail',
-    license='BSD licence, see LICENCE.txt',
-    description='Add maps and photos from the French National Geographic' + \
-                ' Institute to GeoDjango',
-    long_description=open('README.txt').read(),
+    url='https://github.com/nToklo/ntokloapi-python',
+    license='Apache 2.0 license, see LICENCE',
+    description='Manage your nToklo recommendations throught the API',
+    long_description=open('README.md').read(),
     zip_safe=False,
 )
 
