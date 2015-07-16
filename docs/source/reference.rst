@@ -10,6 +10,14 @@ Blacklist
     :show-inheritance:
     :private-members:
 
+Charts
+------
+
+.. automodule:: ntokloapi.charts
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 Events
 ------
 
@@ -18,13 +26,6 @@ Events
     :undoc-members:
     :show-inheritance:
 
-Exceptions
-----------
-
-.. automodule:: ntokloapi.exceptions
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 NtokloAPI
 ---------
@@ -46,6 +47,14 @@ Recommendations
 ---------------
 
 .. automodule:: ntokloapi.recommendations
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+Exceptions
+----------
+
+.. automodule:: ntokloapi.exceptions
     :members:
     :undoc-members:
     :show-inheritance:
