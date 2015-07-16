@@ -34,13 +34,14 @@ class Blacklist(NtokloAPIBase):
         work.
 
         Args:
-            products: The product IDs as a python list
-
-        Exceptions:
-            None
+            products (list): The product IDs as a python list.
 
         Returns:
-            A querystring ready to be tied to a URL/URI
+            String: A querystring ready to be tied to a URL/URI.
+
+        .. note:: This private method will strip out any querstrings that have
+                  no value. Otherwise the request and the signature would not
+                  match.
 
         .. versionadded:: 0.1
         """
@@ -55,13 +56,14 @@ class Blacklist(NtokloAPIBase):
         """Add a product to the blacklist so it doesn't get shown.
 
         Args:
-            productid: List of product Ids to blacklist. Example: ['123','456']
+            productid (list): List of product Ids to blacklist. Example: ['123','456']
 
-        Exceptions:
-            RequestError
+        Raises:
+            RequestError: In case the request couldn't be made or failed.
 
         Returns:
-            Status code of the request
+            String: Status code of the request. `204 No Content` is the
+                    expected response.
 
         .. versionadded:: 0.1
         """
@@ -86,15 +88,15 @@ class Blacklist(NtokloAPIBase):
         allowing them to appear again on the recommendations to the user.
 
         Args:
-            productid: List of product Ids to remove from the blacklist.
+            productid (list): List of product Ids to remove from the blacklist.
                        Example: ['123','456']
 
-        Exceptions:
-            RequestError
+        Raises:
+            RequestError: In case the request couldn't be made or failed.
 
         Returns:
-            Status code of the request, if the request went trough it should
-            come back as 204 (No Content).
+            String: Status code of the request. `204 No Content` is the
+                    expected response.
 
         .. versionadded:: 0.1
         """

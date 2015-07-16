@@ -22,3 +22,9 @@ __version__ = "0.1 alpha"
 # Check for python version before anything
 if not sys.version_info[:2] >= (2, 7):
     raise IncorrectPythonVersion()
+
+# Proceed to import everyting
+from .events import Event
+from .products import Product
+from .recommendations import Recommendation
+from .blacklist import Blacklist

@@ -31,15 +31,12 @@ class NtokloAPIBase():
     fails.
 
     Args:
-        key: The user private API key. It can be obtained from the nToklo
+        key (str): The user private API key. It can be obtained from the nToklo
              console.
-        secret: The user private API secret. It can be obtained from the nToklo
+        secret (str): The user private API secret. It can be obtained from the nToklo
                 console.
-        protocol: The protocol over to which connnect to the API. Default:
+        protocol (str): The protocol over to which connnect to the API. Default:
                   https://
-
-    Returns:
-        An instance of the API that can be used.
 
     .. versionadded:: 0.1
     """
@@ -63,14 +60,16 @@ class NtokloAPIBase():
         information.
 
         Args:
-            uri: The URI of the API resource
-            http_method: HTTP method with which make the request.
+            uri (str): The URI of the API resource
+            http_method (str): HTTP method with which make the request.
 
-        Exceptions:
-            SignatureGenerationError, IncorrectHTTPMethod
+        Raises:
+            SignatureGenerationError: The signature didn't match (URL of the
+                                      request and the URL signed)
+            IncorrectHTTPMethod: The method is not allowed in the API.
 
         Returns:
-            signature: String containing a signed token.
+            String: String containing a signed token.
         """
         if http_method in ACCEPTED_METHODS:
             request_str = "{}&{}{}".format(http_method, self.api_endpoint, uri).encode("utf-8")

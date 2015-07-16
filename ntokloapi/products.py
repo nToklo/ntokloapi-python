@@ -28,17 +28,17 @@ class Product(NtokloAPIBase):
         A product is one of the items that you have on your catalogue.
 
         Args:
-            payload: Universal Value object (in JSON format) to be passed to
-                     the API.
-            version: Which version of the UV to use, the default is the latest
-                     one used by the ntoklo API.
+            payload (str): Universal Value object (in JSON format) to be passed
+                           to the API.
+            version (str): Which version of the UV to use, the default is the
+                           latest one used by the ntoklo API.
 
-        Exceptions:
-            RequestError
+        Raises:
+            RequestError: In case the request couldn't be made or failed.
 
         Returns:
-            The status code of the request in case the user needs to check
-            against it.
+            String: Status code of the request. `204 No Content` is the
+                    expected response.
 
         .. versionadded:: 0.1
         """
