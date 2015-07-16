@@ -30,8 +30,7 @@ Features
 How do I use it?
 ----------------
 
-To be able to use the nToklo recommendation engine, first you have to create
-an account in the nToklo console, to get an **API key** and a **API secret token**
+To be able to use the nToklo recommendation engine, you need to create an application in the nToklo console so you can get an API key and API secret.
 
 You can create your own application `here <http://console.ntoklo.com>`_
 
@@ -39,6 +38,10 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+
+   installation
+   usage
+   reference
 
 
 Indices and tables
