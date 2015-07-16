@@ -35,7 +35,7 @@ class NtokloAPIBase():
              console.
         secret (str): The user private API secret. It can be obtained from the nToklo
                 console.
-        protocol (str): The protocol over to which connnect to the API. Default:
+        protocol (str): (**optional**) The protocol over to which connnect to the API. Default:
                   https://
 
     .. versionadded:: 0.1

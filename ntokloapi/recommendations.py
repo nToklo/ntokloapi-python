@@ -38,16 +38,19 @@ class Recommendation(NtokloAPIBase):
         """Request the recommendations for the application.
 
         Args:
-            userid (str): the user ID number from your application.
-            productid (str): The product ID number from your application.
-            scope (str): A product attribute for which to scope recommendations. For
-                   example scope=category will consider the product category
-                   when returning recommendations. Supports: category,
-                   manufacturer, vendor, action.
-            value (str): The value for the recommendation scope. For example
-                   scope=category&value=shoes will consider the shoe category
-                   when returning recommendations. The value parameter can be
-                   any string value.
+            userid (str): (**optional**) the user ID number from your
+                          application.
+            productid (str): (**optional**) The product ID number from your
+                             application.
+            scope (str): (**optional**) A product attribute for which to scope
+                         recommendations. For example scope=category will
+                         consider the product category when returning
+                         recommendations. Supports: category, manufacturer,
+                         vendor, action.
+            value (str): (**optional**) The value for the recommendation scope.
+                         For example scope=category&value=shoes will consider
+                         the shoe category when returning recommendations.
+                         The value parameter can be any string value.
 
         Raises:
             RequestError: In case the request couldn't be made or failed.

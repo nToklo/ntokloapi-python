@@ -31,8 +31,8 @@ class Event(NtokloAPIBase):
         Args:
             payload: Universal Value object (in JSON format) to be passed to
                      the API.
-            version: Which version of the UV to use, the default is the latest
-                     one used by the ntoklo API.
+            version: (**optional**) Which version of the UV to use, the default
+                     is the latest one used by the ntoklo API.
 
         Raises:
             RequestError: In case the request couldn't be made or failed.

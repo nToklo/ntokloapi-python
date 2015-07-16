@@ -17,7 +17,18 @@ class DictList(dict):
 
     """Create lists inside dictionaries with duplicate keys.
 
-    Snippet source: http://stackoverflow.com/a/10665285
+    Args:
+        dict (dict): A dictionary with keys and values
+
+    Raises:
+        KeyError: If the key if malformed
+
+    Returns:
+        Dictionary: Reordered dictionary in which the same keys joined into
+                    a list.
+
+    References:
+        StackOverflow: http://stackoverflow.com/a/10665285
     """
     def __setitem__(self, key, value):
         try:

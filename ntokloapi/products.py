@@ -30,8 +30,8 @@ class Product(NtokloAPIBase):
         Args:
             payload (str): Universal Value object (in JSON format) to be passed
                            to the API.
-            version (str): Which version of the UV to use, the default is the
-                           latest one used by the ntoklo API.
+            version (str): (**optional**) Which version of the UV to use, the
+                           default is the latest one used by the ntoklo API.
 
         Raises:
             RequestError: In case the request couldn't be made or failed.
