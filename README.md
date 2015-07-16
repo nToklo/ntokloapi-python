@@ -1,6 +1,6 @@
 # nToklo API Python connector
 
-Version: 0.1 alpha
+Version: 0.1 beta
 
 This library will allow you to connect to the nToklo API and create your own applications, get tokens and the results. Full documentation of the API can
 be found [in the nToklo dev website](https://docs.ntoklo.com)
@@ -17,6 +17,7 @@ This is a list of the functionality that is available on this API connector:
 * Blacklist (add, remove)
 * Products (create)
 * Recommendations (get)
+* Charts (get)
 
 ## Dependencies
 
@@ -37,6 +38,10 @@ If you want the latest version from the repository you can do:
 ## Usage
 
 You can see how to use this library on the [documentation](http://ntokloapi-python.readthedocs.org/en/latest/)
+
+## Authors
+
+- Oscar Carballal Prego <oscar.carballal@ntoklo.com>
 
 ## License
 
