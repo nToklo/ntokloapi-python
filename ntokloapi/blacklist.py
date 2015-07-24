@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import json
+
 try:
     # Try to load first the Python 3 version
     from urllib.parse import urlencode
@@ -110,5 +112,36 @@ class Blacklist(NtokloAPIBase):
         try:
             r = self.session.delete(url, params=querystring, headers=self.headers)
             return r.status_code
+        except Exception as e:
+            raise RequestError(e)
+
+    def list(self):
+
+        """List the blacklisted products on an application.
+
+        This funciton will list all the blacklisted products on a specific
+        application given as a querystring.
+
+        Args:
+            appid (str): Application ID as a string.
+
+        Raises:
+            RequestError: In case the request couldn't be made or failed.
+
+        Returns:
+            JSON Object: JSON Object with the lsit of blacklisted elements.
+
+        .. versionadded:: 0.1
+        """
+
+        method = "GET"
+        uri = "/products/blacklist"
+        url = "{}{}".format(self.api_endpoint, uri)
+        auth_token = self.get_token(uri, method)
+        self.headers['Authorization'] = auth_token
+
+        try:
+            r = self.session.get(url, headers=self.headers)
+            return json.loads(r.text)
         except Exception as e:
             raise RequestError(e)
