@@ -119,11 +119,8 @@ class Blacklist(NtokloAPIBase):
 
         """List the blacklisted products on an application.
 
-        This funciton will list all the blacklisted products on a specific
-        application given as a querystring.
-
-        Args:
-            appid (str): Application ID as a string.
+        This method will list all the blacklisted products on a specific
+        application.
 
         Raises:
             RequestError: In case the request couldn't be made or failed.
