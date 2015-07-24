@@ -51,7 +51,7 @@ class Chart(NtokloAPIBase):
                          the shoe category when returning recommendations. The
                          value parameter can be any string value.
             action (str): (**optional**) Filters the requested chart by
-                          conversion_funnel actions. If it’s not specified then
+                          conversion_funnel actions. If it's not specified then
                           the chart returned is all actions, equivalent to
                           action=all.
             tw (str): (**optional**) The time window for which the charts are
