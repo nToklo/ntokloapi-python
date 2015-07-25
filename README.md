@@ -1,6 +1,6 @@
 # nToklo API Python connector
 
-Version: 0.1 beta
+Version: 0.1
 
 This library will allow you to connect to the nToklo API and create your own applications, get tokens and the results. Full documentation of the API can
 be found [in the nToklo dev website](https://docs.ntoklo.com)
@@ -14,7 +14,7 @@ This connector supports both Python >= 2.7 and Python >= 3.3, but we will be foc
 This is a list of the functionality that is available on this API connector:
 
 * Events (send)
-* Blacklist (add, remove)
+* Blacklist (add, remove, list)
 * Products (create)
 * Recommendations (get)
 * Charts (get)

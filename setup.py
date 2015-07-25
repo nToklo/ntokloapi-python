@@ -15,7 +15,7 @@
 from distutils.core import setup
 from setuptools import find_packages
 
-from . import __version__
+__version__ = "0.1"
 
 setup(
     name='ntokloapi',
@@ -24,8 +24,23 @@ setup(
     author_email='oscar.carballal@ntoklo.com',
     packages=find_packages(),
     url='https://github.com/nToklo/ntokloapi-python',
-    license='Apache 2.0 license, see LICENCE',
-    description='Manage your nToklo recommendations throught the API',
+    license='Apache 2.0 license, see LICENSE',
+    description='Manage your nToklo recommendations through the API',
     long_description=open('README.md').read(),
     zip_safe=False,
+    install_requires=[
+        "requests",
+        "nose"
+    ],
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Web Environment',
+        'Intended Audience :: Developers',
+        'Operating System :: POSIX :: Linux',
+        'Operating System :: Unix',
+        'License :: OSI Approved :: Apache Software License',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+    ]
 )
