@@ -7,7 +7,7 @@ be found [in the nToklo dev website](https://docs.ntoklo.com)
 
 ## Support
 
-This connector supports both Python >= 2.7 and Python >= 3.3, but we will be focusing development on the Python 3 support.
+This connector supports both Python >= 2.7 and Python >= 3.4, but we will be focusing development on the Python 3 support.
 
 ## Features
 
