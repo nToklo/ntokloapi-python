@@ -15,7 +15,7 @@
 from distutils.core import setup
 from setuptools import find_packages
 
-__version__ = "0.1"
+__version__ = "0.1.2"
 
 setup(
     name='ntokloapi',
@@ -40,7 +40,6 @@ setup(
         'Operating System :: Unix',
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
     ]
 )
