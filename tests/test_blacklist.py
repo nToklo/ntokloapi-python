@@ -36,5 +36,4 @@ class BlacklistTest(unittest.TestCase):
 
     def test_blacklist_show_items(self):
         response = self.blacklist.list()
-        print(response)
-        assert response == []
+        assert isinstance(response, list)
