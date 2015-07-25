@@ -15,9 +15,7 @@ Support
 The ntokloapi-python connector supports the following versions of Python:
 
 * Python 2.7.x
-* Python 3.3.x
 * Python 3.4.x
-* Python 3.5.x
 
 Features
 --------
