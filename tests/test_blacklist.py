@@ -36,4 +36,4 @@ class BlacklistTest(unittest.TestCase):
 
     def test_blacklist_show_items(self):
         response = self.blacklist.list()
-        assert not response
+        assert response == []
