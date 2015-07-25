@@ -49,7 +49,8 @@ class Blacklist(NtokloAPIBase):
         """
         qs_dict = DictList()
         for product in products:
-            qs_dict['productId'] = product
+            if product:
+                qs_dict['productId'] = product
         querystring = urlencode(qs_dict, True)
         return querystring
 
