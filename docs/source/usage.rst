@@ -54,7 +54,7 @@ Events
 ------
 
 An event in the nToklo recommendation system means some kind of action that has
-performed by the user, and it.
+performed by the user.
 
 Example:
 
@@ -64,7 +64,7 @@ Example:
     import ntokloapi
 
     # This UV is a bit special. You can send the minimum data as in the
-    # example, but you can expend it with the whole information about the
+    # example, but you can expand it with the whole information about the
     # product and the user if you want. That way if the product doesn't exist
     # it will be automatically created in the API.
 
@@ -97,7 +97,7 @@ Recommendations
 ---------------
 
 This is the core of the system, the recommendations. This function will return
-to you a JSON object withe the recommended products for your user and a temporary token.
+to you a JSON object with the recommended products for your user and a temporary token.
 
 Example:
 
@@ -153,7 +153,7 @@ Example:
     blacklist.remove(['10203',])
 
     # Remove multiple products from the blacklist
-    blacklist.add(['10201', '10202'])
+    blacklist.remove(['10201', '10202'])
 
     # List all the currently blacklisted products
     blacklisted_products = blacklist.list()
