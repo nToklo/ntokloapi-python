@@ -1,0 +1,35 @@
+<DOCTYPE! html>
+<html lang="en">
+
+<body>
+
+<h1>{{category.name}}</h1>
+{% for product in products %}
+
+<ul>
+    <li>
+<a href="{% url 'product' product.id %}" >{{product.name}} </a>
+    </li>
+</ul>
+{% endfor %}
+
+
+
+    {% if basket %}
+    <ul>
+        {% for product in basket.products.all %}
+            <li><a href="{% url 'product' product.id %}" >{{ product.name }}</a></li>
+        {% empty %}
+            <p>No Products in Basket.</p>
+        {% endfor %}
+
+    <p> Total cost</p> {{basket.total}}
+    </ul>
+    {% endif %}
+
+
+</ul>
+</body>
+
+
+</html>

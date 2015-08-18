@@ -1,0 +1,35 @@
+<DOCTYPE! html>
+<html lang="en">
+
+    <head>
+        <title> category - {% block pagetitle %}{% endblock %} </title>
+    </head>
+
+    <body>
+
+
+{% if page_category %}
+    <ul>
+    {% for category in page_category %}
+        <li><a href="/productcatalog/category/{{category.id}}">{{ category.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Catagories are available.</p>
+{% endif %}
+
+
+    {% if basket %}
+    <ul>
+        {% for product in basket.products.all %}
+            <li><a href="{% url 'product' product.id %}" >{{ product.name }}</a></li>
+        {% empty %}
+            <p>No Products in Basket.</p>
+        {% endfor %}
+
+    <p> Total cost</p> {{basket.total}}
+    </ul>
+    {% endif %}
+
+    </body>
+</html>

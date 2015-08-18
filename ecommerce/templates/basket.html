@@ -1,0 +1,25 @@
+<DOCTYPE! html>
+<html lang="en">
+
+
+    <head>
+        <title> Basket - {% block pagetitle %}{% endblock %} </title>
+    </head>
+
+    <body>
+
+
+    {% if basket %}
+    <ul>
+        {% for product in basket.products.all %}
+            <li><a href="{% url 'product' product.id %}" >{{ product.name }}</a></li>
+        {% empty %}
+            <p>No Products in Basket.</p>
+        {% endfor %}
+
+    <p> Total cost</p> {{basket.total}}
+    <a href="/basket/purchase/">Buy</a>
+    </ul>
+    {% endif %}
+    </body>
+</html>

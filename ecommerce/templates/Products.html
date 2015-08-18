@@ -1,0 +1,19 @@
+<DOCTYPE! html>
+<html lang="en">
+
+    <head>
+        <title> Products - {% block pagetitle %}{% endblock %} </title>
+    </head>
+
+    <body>
+
+
+    <ul>
+    {% for product in page_products %}
+        <li><a href="/productcatalog/product/{{product.id}}">{{ product.name }}</a></li>
+    {% endfor %}
+
+
+
+    </body>
+</html>

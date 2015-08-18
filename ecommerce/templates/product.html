@@ -1,0 +1,42 @@
+
+<DOCTYPE! html>
+<html lang="en">
+
+<body>
+
+<h1>{{product.name}}</h1>
+<h2>{{product.catagory}}<h2>
+<body>
+    <img src="{{product.photo.url}}" />
+    <p>{{product.description}}</p>
+<h3>{{product.manufacturer}}</h3>
+<ul>
+
+    <li>{{product.price_in_sterling}}</li>
+    <li>{{product.available}}</li>
+    <li>{{product.instock}}</li>
+
+</ul>
+<a href="/basket/cart_add/{{product.id}}">Add to cart</a>
+</body>
+  {% if basket %}
+    <ul>
+        {% for product in basket.products.all %}
+            <li><a href="{% url 'product' product.id %}" >{{ product.name }}</a></li>
+        {% empty %}
+            <p>No Products in Basket.</p>
+        {% endfor %}
+        {%endif%}
+
+    <p> Total cost</p> {{basket.total}}
+    </ul>
+
+    <p>recommended</p>
+  {% if recommendations %}
+    <ul>
+        {% for product in recommendations.items%}
+            <li><a href="/productcatalog/product/{{product.id}}?tracker_id={{recommendations.tracker_id}}">{{ product.name }}</a></li>
+        {%endfor%}
+    </ul>
+{%endif%}
+</html>

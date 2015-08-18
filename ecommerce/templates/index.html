@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head> <title> Homepage - {% block pagetitle %}{%endblock%}</title></head>
+<body>
+{% for category in category %}
+
+<ul>
+    <li>
+<a href="{% url 'categories' category.id %}">{{category.name}}</a>
+</li>
+</ul>
+
+{% endfor %}
+
+{% for product in product %}
+<ul>
+    <li>
+        <a href="{% url 'product' product.id %}"> {{product.name}}</a>
+    </li>
+</ul>
+
+{% endfor %}
+{% for product in basket.products.all %}
+            <li><a href="{% url 'product' product.id %}" >{{ product.name }}</a></li>
+        {% empty %}
+            <p>No Products in Basket.</p>
+        {% endfor %}
+
+    <p> Total cost</p> {{basket.total}}
+</body>
+</html>

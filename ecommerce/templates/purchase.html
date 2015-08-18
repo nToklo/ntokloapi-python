@@ -1,0 +1,23 @@
+<DOCTYPE! html>
+<html lang="en">
+
+    <head>
+        <title> Purchase - {% block pagetitle %}{% endblock %} </title>
+    </head>
+
+    <body>
+        <p> Thank you for your custom, purchase details below: </p>
+
+    {% if Purchase %}
+    <ul>
+        {% for product in purchase.products.all %}
+            <li><a href="{% url 'product' product.id %}" >{{ product.name }}</a></li>
+        {% empty %}
+            <p>No Products in Basket.</p>
+        {% endfor %}
+
+    <p> Total cost</p> {{basket.total}}
+    </ul>
+    {% endif %}
+    </body>
+</html>

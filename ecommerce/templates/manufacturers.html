@@ -1,0 +1,35 @@
+<DOCTYPE! html>
+<html lang="en">
+
+    <head>
+        <title> Manufacturers - {% block pagetitle %}{% endblock %} </title>
+    </head>
+
+  <body>
+
+
+{% if manufacturer %}
+    <ul>
+    {% for manufacturer in manufacturer %}
+        <li><a href="/productcatalog/manufacturers/{{manufacturer.id}}/">{{manufacturer.name}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No manufacturers are available.</p>
+{% endif %}
+
+
+    {% if basket %}
+    <ul>
+        {% for product in basket.products.all %}
+            <li><a href="{% url 'product' product.id %}" >{{ product.name }}</a></li>
+        {% empty %}
+            <p>No Products in Basket.</p>
+        {% endfor %}
+
+    <p> Total cost</p> {{basket.total}}
+    </ul>
+    {% endif %}
+
+    </body>
+</html>
