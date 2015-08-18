@@ -107,7 +107,7 @@ Example:
     import ntokloapi
 
     recommendation = ntokloapi.Recommendation(MyAPIKey, MyAPISecret)
-    recommendations = recommendations.get(productid='10201')
+    recommendations = recommendation.get(productid='10201')
 
     print(recommendations)
 
