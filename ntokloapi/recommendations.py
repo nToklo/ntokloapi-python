@@ -28,7 +28,7 @@ from .exceptions import RequestError
 class Recommendation(NtokloAPIBase):
 
     def _clean_querystring(self, querystring):
-        for key in querystring:
+        for key in querystring.copy():
             if not querystring[key]:
                 del querystring[key]
         return querystring
@@ -69,6 +69,7 @@ class Recommendation(NtokloAPIBase):
                                                         scope=scope,
                                                         value=value))
         querystring = urlencode(qs_values)
+        print(url + querystring)
         auth_token = self.get_token(uri + "?" + querystring, method)
         self.headers['Authorization'] = auth_token
 

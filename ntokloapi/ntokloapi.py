@@ -44,7 +44,7 @@ class NtokloAPIBase():
     def __init__(self, key, secret, protocol="https://"):
         self.key = key
         self.secret = secret
-        self.api_endpoint = "{}api.ntoklo.com".format(protocol)
+        self.api_endpoint = "{}api1.ntoklo.com".format(protocol)
 
         # Define base headers
         self.headers = {'Content-Type': 'application/json; charset=utf-8'}
@@ -83,4 +83,5 @@ class NtokloAPIBase():
         else:
             raise IncorrectHTTPMethod(http_method)
 
+        print("Authorization: {}".format(auth_header))
         return auth_header

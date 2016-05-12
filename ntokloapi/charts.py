@@ -28,7 +28,7 @@ from .exceptions import RequestError
 class Chart(NtokloAPIBase):
 
     def _clean_querystring(self, querystring):
-        for key in querystring:
+        for key in querystring.copy():
             if not querystring[key]:
                 del querystring[key]
         return querystring

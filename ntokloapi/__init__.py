@@ -25,3 +25,4 @@ from .events import Event
 from .products import Product
 from .recommendations import Recommendation
 from .blacklist import Blacklist
+from .charts import Chart
